@@ -37,7 +37,7 @@
     border-radius: 6px;
 }
 
-@media (max-height: 1400px) and (max-width:264px) {
+@media (max-height: 1400px) and (max-width:576px) {
     .container {
         padding-top:50%;
         height:100%;
