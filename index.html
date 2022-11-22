@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">
+            Counter
+        </h1>
+        <p class="counter-value" id="counter">0</p>
+        <div class="btn-container">
+            <button id="btn" class="btn" onClick="decrease()">Decrease</button>
+            <button id="btn" class="btn" onClick="reset()">Reset</button>
+            <button id="btn" class="btn" onClick="increase()">Increase</button>
+        </div>
+    </div>
+    <script>
+       let counterValue = document.getElementById("counter");
+
+
+function increase() {
+    let previousValue = counterValue.textContent
+    let updatedValue = parseInt(previousValue) + 1
+    if (updatedValue > 0) {
+        counterValue.style.color = "#1b0540";
+    } else if (updatedValue < 0) {
+        counterValue.style.color = "#e32012";
+    } else {
+        counterValue.style.color = "black"
+    }
+    counterValue.textContent = updatedValue
+
+}
+
+function decrease() {
+    let previousValue = counterValue.textContent
+    let updatedValue = parseInt(previousValue) - 1
+    if (updatedValue > 0) {
+        counterValue.style.color = "#1b0540";
+    } else if (updatedValue < 0) {
+        counterValue.style.color = "#e32012";
+    } else {
+        counterValue.style.color = "black"
+    }
+    counterValue.textContent = updatedValue;
+}
+
+function reset() {
+    let previousValue = 0;
+    counterValue.textContent = previousValue
+} 
+    </script>
+</body>
+
+</html>
